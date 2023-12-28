@@ -19,7 +19,7 @@ def add_time(current_time_string, time_to_add_string, current_day_name=None):
 
     def calculate_week_day_name(starting_day_name, days_added_number):
         position_to_dayname = {0: "sunday", 1: "monday", 2: "tuesday",
-                               3: "wednesday", 4: "thursday", 5: "friday", "6": "saturday"}
+                               3: "wednesday", 4: "thursday", 5: "friday", 6: "saturday"}
         day_name_to_position = {value: key for key,
                                 value in position_to_dayname.items()}
         return position_to_dayname[(day_name_to_position[starting_day_name.lower()]+days_added_number) % 7].capitalize()
